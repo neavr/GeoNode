@@ -10,7 +10,7 @@
 			<th>Kode</th>
 			<th>Nama Kategori</th>
 			<th>Marker</th>
-			<th width="200px">Aksi</th>
+			<th width="200px">Action</th>
 		</tr>
 	</thead>
 	<tbody>

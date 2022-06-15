@@ -61,7 +61,7 @@ class Kecamatan extends CI_Controller {
 				return false;
 			}
 			$data=[
-				'kd_kecamatan'=>$this->input->post('kd_kecamatan'),
+				'kd_kecamatan'=>$this->input->post('id_kecamatan'),
 				'nm_kecamatan'=>$this->input->post('nm_kecamatan'),
 				'warna_kecamatan'=>$this->input->post('warna_kecamatan'),
 			];

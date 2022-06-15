@@ -39,7 +39,11 @@ if($parameter=='ubah' && $id!=''){
 	    					$op[$row->id_kecamatan]=$row->nm_kecamatan;
 	    				}
 	    			?>
-	    			<?=select('id_kecamatan',$op,$id_kecamatan)?>
+	    			<select name="id_kecamatan" class='form-control' id="kecamatan">
+	    			<?php foreach ($get->result() as $row) { ?>
+                        <option value="<?= $row->id_kecamatan ?>"><?= $row->nm_kecamatan?> </option>
+                        <?php } ?>
+					</select>
 	    		</div>
     		</div>
     	</div>
@@ -81,7 +85,7 @@ if($parameter=='ubah' && $id!=''){
                         $op['']='Pilih Kategori';
                         $get=$this->KategorihotspotModel->get();
                         foreach ($get->result() as $row) {
-                            $op[$row->id_kategori_hotspot]=$row->nm_kategori_hotspot;
+                            $op[$row->nm_kategori_hotspot]=$row->nm_kategori_hotspot;
                         }
                     ?>
                     <?=select('id_kategori_hotspot',$op,$id_kategori_hotspot)?>

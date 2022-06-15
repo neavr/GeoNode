@@ -10,7 +10,7 @@
 			<th>Nama Kecamatan</th>
 			<th>GeoJSON</th>
 			<th>Warna</th>
-			<th width="200px">Aksi</th>
+			<th width="200px">Action</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -20,7 +20,7 @@
 				?>
 					<tr>
 						<td class="text-center"><?=$no?></td>
-						<td><?=$row->id_kecamatan?></td>
+						<td><?=$row->kd_kecamatan?></td>
 						<td><?=$row->nm_kecamatan?></td>
 						<td><a href="<?=assets('unggah/geojson/'.$row->geojson_kecamatan)?>" target="_BLANK"><?=$row->geojson_kecamatan?></a></td>
 						<td style="background: <?=$row->warna_kecamatan?>"></td>

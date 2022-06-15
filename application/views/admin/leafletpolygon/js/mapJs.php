@@ -25,9 +25,9 @@
 	<script src="<?=site_url('admin/api/data/hotspot/polygon')?>"></script>
 
    <script type="text/javascript">
-   	var map = L.map('map').setView([-3.824181, 114.8191513], 10);
+   	var map = L.map('map').setView([-6.6355092773554585, 106.7861490878395], 14);
    	var layersKecamatan=[];
-   	var Layer=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+   	var Layer=L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	    maxZoom: 18,
 	    id: 'mapbox.streets',

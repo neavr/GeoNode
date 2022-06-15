@@ -48,7 +48,7 @@
               <div class="animate form-login">
                 <section class="">
                   <form action="<?=site_url('admin/auth/check')?>" method="POST">
-                    <h2 class="text-success"><i class="fa fa-map"></i> GeoNode.</title></h2>
+                    <h2 class="text-danger"><i class="fa fa-map"></i> GeoNode.</title></h2>
                     <h1>Login Form</h1>
                     <?=$this->session->flashdata('info')?>
                     <div class="form-group">
@@ -65,9 +65,9 @@
                     </div>
 
                     <div class="clearfix"></div>
-                      <div>
-                        <p>©2020 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Image By <a href="https://www.freepik.com/free-vector/concept-protected-access-control-lock-with-key-data-security_4102302.htm" target="_BLANK">Freepik</a></p>
-                      </div>
+                      <!-- <div>
+                        <p>CodeIgniter</a></p>
+                      </div> -->
                   </form>
                 </section>
               </div>

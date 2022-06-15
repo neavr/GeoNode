@@ -1,7 +1,7 @@
  <footer>
   <div class="pull-right">
     
-  <strong>&copy;Heavn.</strong>
+  <strong>&copy;Neavr.</strong>
   </div>
   <div class="clearfix"></div>
 </footer>

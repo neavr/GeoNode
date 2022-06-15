@@ -1,6 +1,5 @@
 <?php
 $id_kecamatan="";
-$id_kecamatan="";
 $nm_kecamatan="";
 $geojson_kecamatan="";
 $warna_kecamatan="";
@@ -32,7 +31,7 @@ if($this->session->flashdata('error_value')){
     		<label>Kode Kecamatan</label>
     		<div class="row">
 	    		<div class="col-md-4">
-	    			<?=input_text('id_kecamatan',$id_kecamatan)?>
+	    			<?=input_text('kd_kecamatan',$id_kecamatan)?>
 		    	</div>
 	    	</div>
     	</div>

@@ -1,11 +1,11 @@
 <?=content_open($title)?>
 <a href="<?=site_url($url.'/form/tambah')?>" class="btn btn-success" ><i class="fa fa-plus"></i> Tambah</a>
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+<!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
 	<i class="fa fa-upload"></i> Import CSV
 </button>
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalZip">
 	<i class="fa fa-upload"></i> Import Zip
-</button>
+</button> -->
 <a href="<?=site_url($url.'/export/pdf')?>" class="btn btn-danger" target="_BLANK" ><i class="fa fa-file-pdf-o"></i> Export PDF</a>
 <hr>
 <?=$this->session->flashdata('info')?>
@@ -21,7 +21,7 @@
 			<th>Lat</th>
 			<th>Lng</th>
 			<th>Kategori</th>
-			<th width="200px">Aksi</th>
+			<th width="200px">Action</th>
 		</tr>
 	</thead>
 	

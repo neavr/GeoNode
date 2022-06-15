@@ -1,7 +1,7 @@
  <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-map"></i> <span>gjls anj</span></a>
+              <a href="<?=site_url('admin/')?>" class="site_title"><i class="fa fa-folder"></i> <span>Data Access</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -35,22 +35,24 @@
                     </ul>
                   </li>
                   <?php } ?>
-                   <li><a><i class="fa fa-tags"></i> Transaksi <span class="fa fa-chevron-down"></span></a>
+                   <li><a><i class="fa fa-folder"></i> Data <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?=site_url('admin/hotspot')?>">Hotspot</a></li>
                     </ul>
                   </li>
-                   <li><a><i class="fa fa-map"></i> LeafletJs <span class="fa fa-chevron-down"></span></a>
+                   <li><a><i class="fa fa-map"></i> Leaflet.Js <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?=site_url('admin/leafletstandar')?>">Standar</a></li>
                       <li><a href="<?=site_url('admin/leafletpoint')?>">Point</a></li>
                       <li><a href="<?=site_url('admin/leafletroutingmachine')?>">Routing Machine</a></li>
-                      <li><a href="<?=site_url('admin/leafletpolygon')?>">Polygon</a></li>
-                    </ul>
-                  </li>
+                      <!-- <li><a href="<?=site_url('admin/leafletpolygon')?>">Polygon</a></li> -->
+                      </ul>
+                  <!-- </li>
                    <li><a><i class="fa fa-question"></i> Mencoba Menjawab <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                    </ul>
+                      <li><a href="<?=site_url('admin/mmbagian10')?>">Bagian 10</a></li>
+                      <li><a href="<?=site_url('admin/mmbagian11')?>">Bagian 11</a></li>
+                    </ul> -->
                   </li>
                   <li><a href="<?=site_url('admin/auth/out')?>"><i class="fa fa-sign-out"></i> Keluar</a></li>
                 </ul>
@@ -69,7 +71,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="<?=site_url('admin/auth/out')?>">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>

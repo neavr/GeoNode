@@ -6,7 +6,7 @@ class HotspotModel extends CI_Model{
 		$data=$this->db->select('*')
 					->from('t_hotspot a')
 					->join('m_kecamatan b','a.id_kecamatan=b.id_kecamatan','LEFT')
-					->join('m_kategori_hotspot c','a.id_kategori_hotspot=c.id_kategori_hotspot','LEFT')
+					->join('m_kategori_hotspot c','a.marker=c.nm_kategori_hotspot','LEFT')
 					->get();
 		return $data;
 	}

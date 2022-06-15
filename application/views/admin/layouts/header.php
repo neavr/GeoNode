@@ -9,7 +9,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="<?=templates('production/images/img.jpg')?>" alt="">John Doe
+                      <img src="<?=templates('production/images/img.jpg')?>" alt="">Neavr
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;"> Profile</a>
@@ -18,7 +18,7 @@
                           <span>Settings</span>
                         </a>
                     <a class="dropdown-item"  href="javascript:;">Help</a>
-                      <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <a class="dropdown-item"  href="<?=site_url('admin/auth/out')?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>
   
@@ -32,7 +32,7 @@
                         <a class="dropdown-item">
                           <span class="image"><img src="<?=templates('production/images/img.jpg')?>" alt="Profile Image" /></span>
                           <span>
-                            <span>John Smith</span>
+                            <span>Neavr</span>
                             <span class="time">3 mins ago</span>
                           </span>
                           <span class="message">
@@ -44,7 +44,7 @@
                         <a class="dropdown-item">
                           <span class="image"><img src="<?=templates('production/images/img.jpg')?>" alt="Profile Image" /></span>
                           <span>
-                            <span>John Smith</span>
+                            <span>Neavr</span>
                             <span class="time">3 mins ago</span>
                           </span>
                           <span class="message">
@@ -56,7 +56,7 @@
                         <a class="dropdown-item">
                           <span class="image"><img src="<?=templates('production/images/img.jpg')?>" alt="Profile Image" /></span>
                           <span>
-                            <span>John Smith</span>
+                            <span>Neavr</span>
                             <span class="time">3 mins ago</span>
                           </span>
                           <span class="message">
@@ -68,7 +68,7 @@
                         <a class="dropdown-item">
                           <span class="image"><img src="<?=templates('production/images/img.jpg')?>" alt="Profile Image" /></span>
                           <span>
-                            <span>John Smith</span>
+                            <span>Neavr</span>
                             <span class="time">3 mins ago</span>
                           </span>
                           <span class="message">

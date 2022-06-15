@@ -27,10 +27,10 @@
 	<script src="<?=site_url('admin/api/data/kategorihotspot')?>"></script>
 
    <script type="text/javascript">
-   	var map = L.map('map').setView([-3.824181, 114.8191513], 10);
+   	var map = L.map('map').setView([-6.6355092773554585, 106.7861490878395], 14);
    	var layersKecamatan=[];
    	var layersKategorihotspot=[];
-   	var Layer=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+   	var Layer=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	    maxZoom: 18,
 	    id: 'mapbox.streets',
@@ -47,7 +47,7 @@
 		title: 'Leaflet EasyPrint',
 		position: 'topleft',
 		exportOnly: true,
-		filename :'WebGIS CI',
+		filename :'point',
 		sizeModes: ['Current','A4Portrait', 'A4Landscape']
 	}).addTo(map);
 	// pengaturan legend
@@ -69,11 +69,12 @@
 		},
 		{	
 			name: "OpenCycleMap",
-			layer: L.tileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png')
+			layer: L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=e215fe64095b490d8ec8c1b2150a11e4')
 		},
 		{
-			name: "Outdoors",
-			layer: L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png')
+		name: "Outdoors",
+			layer: L.tileLayer('https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=e215fe64095b490d8ec8c1b2150a11e4')
+				
 		},
 		{
 			name:'Satelite Google',

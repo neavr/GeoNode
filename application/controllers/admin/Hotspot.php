@@ -11,10 +11,12 @@ class Hotspot extends CI_Controller {
 	}
 
 	public function index()
-	{
+	{ 
 		$datacontent['url']='admin/hotspot';
-		$datacontent['title']='Halaman Hotpost';
+		$datacontent['title']='Halaman Hotspot';
 		$datacontent['datatable']=$this->Model->get();
+		//  var_dump($datacontent['datatable']);
+		//  die;
 		$data['content']=$this->load->view('admin/hotspot/tableView',$datacontent,TRUE);
 		$data['js']=$this->load->view('admin/hotspot/js/tableJs',$datacontent,TRUE);
 		$data['title']=$datacontent['title'];
@@ -25,7 +27,7 @@ class Hotspot extends CI_Controller {
 		$datacontent['url']='admin/hotspot';
 		$datacontent['parameter']=$parameter;
 		$datacontent['id']=$id;
-		$datacontent['title']='Form Hotpost';
+		$datacontent['title']='Form Hotspot';
 		$data['content']=$this->load->view('admin/hotspot/formView',$datacontent,TRUE);
 		$data['js']=$this->load->view('admin/hotspot/js/formJs',$datacontent,TRUE);
 		$data['title']=$datacontent['title'];
@@ -34,31 +36,33 @@ class Hotspot extends CI_Controller {
 	public function simpan()
 	{
 		if($this->input->post()){
+			// var_dump($this->input->post());
+			// die;
 			$data=[
 				'id_kecamatan'=>$this->input->post('id_kecamatan'),
-				'id_kategori_hotspot'=>$this->input->post('id_kategori_hotspot'),
+				// 'id_kategori_hotspot'=>$this->input->post('id_kategori_hotspot'),
 				'keterangan'=>$this->input->post('keterangan'),
 				'lokasi'=>$this->input->post('lokasi'),
 				'lat'=>$this->input->post('lat'),
 				'lng'=>$this->input->post('lng'),
 				'tanggal'=>$this->input->post('tanggal'),
-				'polygon'=>$this->input->post('polygon'),
+				'marker'=>$this->input->post('id_kategori_hotspot'),
 			];
 			// upload
-			if($_FILES['marker']['name']!=''){
-				$upload=upload('marker','marker','image');
-				if($upload['info']==true){
-					$data['marker']=$upload['upload_data']['file_name'];
-				}
-				elseif($upload['info']==false){
-					$info='<div class="alert alert-danger alert-dismissible">
-	            		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-	            		<h4><i class="icon fa fa-ban"></i> Error!</h4> '.$upload['message'].' </div>';
-					$this->session->set_flashdata('info',$info);
-					redirect('admin/hotspot');
-					exit();
-				}
-			}
+			// if($_FILES['marker']['name']!=''){
+			// 	$upload=upload('marker','marker','image');
+			// 	if($upload['info']==true){
+			// 		$data['marker']=$upload['upload_data']['file_name'];
+			// 	}
+			// 	elseif($upload['info']==false){
+			// 		$info='<div class="alert alert-danger alert-dismissible">
+	        //     		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+	        //     		<h4><i class="icon fa fa-ban"></i> Error!</h4> '.$upload['message'].' </div>';
+			// 		$this->session->set_flashdata('info',$info);
+			// 		redirect('admin/hotspot');
+			// 		exit();
+			// 	}
+			// }
 			// upload
 			
 			if($_POST['parameter']=="tambah"){
@@ -223,6 +227,7 @@ class Hotspot extends CI_Controller {
 
 
 	public function datatable(){
+	
 		header('Content-Type: application/json');
 		$url = 'admin/hotspot';
 		$kolom =['id_hotspot','tanggal','lokasi','nm_kecamatan','keterangan','lat','lng','nm_kategori_hotspot'];
@@ -280,32 +285,5 @@ class Hotspot extends CI_Controller {
 
 	}
 /**
-	<tbody>
-		<?php
-			$no=1;
-			foreach ($datatable->result() as $row) {
-				?>
-					<tr>
-						<td class="text-center"><?=$no?></td>
-						<td><?=$row->lokasi?></td>
-						<td><?=$row->nm_kecamatan?></td>
-						<td><?=$row->keterangan?></td>
-						<td><?=$row->lat?></td>
-						<td><?=$row->lng?></td>
-						<td><?=$row->tanggal?></td>
-						<td><?=$row->nm_kategori_hotspot?></td>
-						<td class="text-center">
-							<div class="btn-group">
-								<a href="<?=site_url($url.'/form/ubah/'.$row->id_hotspot)?>" class="btn btn-info"><i class="fa fa-edit"></i> Ubah</a>
-								<a href="<?=site_url($url.'/hapus/'.$row->id_hotspot)?>" class="btn btn-danger" onclick="return confirm('Hapus data?')"><i class="fa fa-trash"></i> Hapus</a>
-							</div>
-						</td>
-					</tr>
-				<?php
-				$no++;
-			}
-
-		?>
-	</tbody>
 	**/
 }

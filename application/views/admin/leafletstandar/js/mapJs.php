@@ -10,9 +10,9 @@
 	<script src="<?=site_url('admin/api/data/kecamatan')?>"></script>
 
    <script type="text/javascript">
-   	var map = L.map('map').setView([-3.824181, 114.8191513], 10);
+   	var map = L.map('map').setView([-6.6597033, 106.7824544], 10);
    	var layersKecamatan=[];
-   	var Layer=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+   	var Layer=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	    maxZoom: 18,
 	    id: 'mapbox.streets',
@@ -56,7 +56,7 @@
 		    	html+='<td>'+f.properties['KECAMATAN']+'</td>';
 	    	html+='</tr>';
 	    	html+='</table>';
-	    	html+='<a href="<?=site_url('kecamatan')?>" target="_BLANK">'
+	    	html+='<a href="<?=site_url('admin/kecamatan')?>" target="_BLANK">'
 	    			+'<button  class="btn btn-info btn-sm" ><i class="fa fa-info"></i> Info</button></a>';
 	        l.bindPopup(html);
 	        l.bindTooltip(f.properties['KECAMATAN'],{
@@ -81,11 +81,12 @@
 		},
 		{	
 			name: "OpenCycleMap",
-			layer: L.tileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png')
+			layer: L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=e215fe64095b490d8ec8c1b2150a11e4')
 		},
 		{
 			name: "Outdoors",
-			layer: L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png')
+			layer: L.tileLayer('https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=e215fe64095b490d8ec8c1b2150a11e4')
+				
 		},
 		{
 			name:'Satelite Google',
@@ -102,6 +103,7 @@
 
 	for(i=0;i<dataKecamatan.length;i++){
 		var data=dataKecamatan[i];
+		console.log(data);
 		var layer={
 			name: data.nm_kecamatan,
 			icon: iconByName(data.warna_kecamatan),

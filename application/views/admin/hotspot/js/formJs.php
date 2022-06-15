@@ -3,10 +3,10 @@
  	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
    crossorigin=""></script>
 
-  <!-- Load Esri Leaflet from CDN -->
-  <script src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
-  integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
-  crossorigin=""></script>
+   <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@3.0.8/dist/esri-leaflet.js"
+    integrity="sha512-E0DKVahIg0p1UHR2Kf9NX7x7TUewJb30mxkxEm2qOYTVJObgsAGpEol9F6iK6oefCbkJiA4/i6fnTHzM6H1kEA=="
+    crossorigin=""></script>
 
 
   <!-- Load Esri Leaflet Geocoder from CDN -->
@@ -26,9 +26,9 @@
    	var idKecamatanInput=document.querySelector("[name=id_kecamatan]");
    	var geocodeService = L.esri.Geocoding.geocodeService();
    	var marker;
-   	var map = L.map('map').setView([-3.824181, 114.8191513], 12);
+   	var map = L.map('map').setView([-6.6355092773554585, 106.7861490878395], 14);
 
-   	var Layer=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+   	var Layer=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	    maxZoom: 18,
 	    id: 'mapbox.streets',
@@ -37,8 +37,7 @@
 	map.addLayer(Layer);
 
 	///
-	var kabupaten = new L.GeoJSON.AJAX("<?=base_url()?>assets/geojson/tanahlaut.geojson").addTo(map);
-	kabupaten.on("click",function(e){
+	map.on("click",function(e){
 		var lat=e.latlng.lat;
 		var lng=e.latlng.lng;
 		if(!marker){
@@ -71,14 +70,23 @@
 	        return;
 	      }
 	      console.log(result);
+	      var find = false;
 	      var district=result.address.District;
 		  idKecamatanInput.selectedIndex=0;
-	      for(i=0;i<idKecamatanInput.options.length;i++){
-	      	if(idKecamatanInput.options[i].text==district){
+		  console.log('ini distrik'+ district);
+	      for(i=0; i<idKecamatanInput.options.length; i++){
+	      	if(idKecamatanInput.options[i].text == district){
 	      		idKecamatanInput.selectedIndex=i;
+	      		find = true;
 	      		break;
 	      	}
 	      }
+	//       if(find == false){
+	//         $('#kecamatan').append($('<option selected>', {
+    //     value: 1,
+    //     text: ''
+	// }));
+	//       }
 	    });
 	});
 

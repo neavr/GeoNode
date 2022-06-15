@@ -25,8 +25,8 @@
 	<script src="<?=site_url('admin/api/data/hotspot/varpoint')?>"></script>
 
    <script type="text/javascript">
-   	let latLng=[-3.824181, 114.8191513];
-   	var map = L.map('map').setView(latLng, 15);
+   	let latLng=[-6.6355092773554585, 106.7861490878395];
+   	var map = L.map('map').setView(latLng, 14);
    	var Layer=L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
 	});
@@ -63,7 +63,7 @@
     		console.log(coord);
     		 if (feature.properties && feature.properties.name) {
 		        layer.bindPopup(feature.properties.popUp+
-		        	"<br><button class='btn btn-info keSini' data-lat='"+coord[1]+"' data-lng='"+coord[0]+"'>Ke Sini</button>"
+		        	"<br><data-lat='"+coord[1]+"' data-lng='"+coord[0]+"'></data-lat=>"
 		        	);
 		    }
     	}
