@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/GeoNode/';
+$config['base_url'] = 'http://103.134.154.128/GeoNode/';
 
 /*
 |--------------------------------------------------------------------------
