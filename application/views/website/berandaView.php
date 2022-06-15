@@ -7,12 +7,7 @@
       <div class="row align-items-center text-center text-md-left">
         <div class="col-md-6 col-lg-5 mb-5 mb-md-0">
           <h1>Welcome To GeoNode.</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>GeoNode adalah aplikasi GIS atau pemetaan digital yang memanfaatkan jaringan internet sebagai media komunikasi yang berfungsi mendistribusikan, mempublikasikan, mengintegrasikan, mengkomunikasikan dan menyediakan informasi dalam bentuk teks, peta digital serta menjalankan fungsi-fungsi analisis dan query yang terkait dengan GIS melalui jaringan internet.</p>
           <a class="button button-hero mt-4" href="" target="_BLANK">Get Started</a>
         </div>
         <div class="col-md-6 col-lg-7 col-xl-6 offset-xl-1">
@@ -25,7 +20,7 @@
 
 
   <!--================Service Area Start =================-->
-  <section class="section-margin generic-margin">
+  <!-- <section class="section-margin generic-margin">
     <div class="container">
       <div class="section-intro text-center pb-90px">
         <img class="section-intro-img" src="<?=templates('img/home/section-icon.png','website')?>" alt="">
@@ -69,12 +64,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--================Service Area End =================-->
 
 
   <!--================About Area Start =================-->
-  <section class="bg-gray section-padding magic-ball magic-ball-about">
+  <!-- <section class="bg-gray section-padding magic-ball magic-ball-about">
     <div class="container">
       <div class="row">
         <div class="col-lg-7 col-md-6 mb-4 mb-md-0">
@@ -89,11 +84,11 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--================About Area End =================-->
 
   <!--================Tour section Start =================-->
-  <section class="section-margin pb-xl-5">
+  <!-- <section class="section-margin pb-xl-5">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -179,12 +174,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--================Tour section End =================-->
 
 
   <!--================Testimonial section Start =================-->
-  <section class="bg-gray section-padding magic-ball magic-ball-testimonial pb-xl-5">
+  <!-- <section class="bg-gray section-padding magic-ball magic-ball-testimonial pb-xl-5">
     <div class="container">
       <div class="section-intro text-center pb-90px">
         <img class="section-intro-img" src="<?=templates('img/home/section-icon.png','website')?>" alt="">
@@ -247,12 +242,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--================Testimonial section End =================-->
 
 
   <!--================Search Package section Start =================-->
-  <section class="section-margin">
+  <!-- <section class="section-margin">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-xl-5 align-self-center mb-5 mb-lg-0">
@@ -313,12 +308,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--================Search Package section End =================-->
 
 
   <!--================Blog section Start =================-->
-  <section class="section-padding bg-gray">
+  <!-- <section class="section-padding bg-gray">
     <div class="container">
       <div class="section-intro text-center pb-90px">
         <img class="section-intro-img" src="<?=templates('img/home/section-icon.png','website')?>" alt="">
@@ -376,4 +371,4 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section> --> -->
