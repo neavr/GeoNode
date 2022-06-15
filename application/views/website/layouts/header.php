@@ -3,7 +3,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container box_1620">
           <div class="navbar-brand logo_h">
-            <img src="<?=base_url('assets/images/icons/logo.png')?>" style="width: 40px;float:left;margin-top:5px;margin-right: 5px">
+            <img src="<?=base_url('assets/images/icons/bash.png')?>" style="width: 40px;float:left;margin-top:5px;margin-right: 5px">
             <h1 class="text-danger m-0 p-0" style="font-size: 30px"><a  href="<?=site_url('')?>">GeoNode.</a></h1>
             <p class="m-0 p-0" style="font-size: 14px;margin-top:-5px !important">CodeIgniter</p>
           </div>   
